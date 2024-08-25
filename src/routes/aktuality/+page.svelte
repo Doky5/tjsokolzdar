@@ -1,7 +1,8 @@
 <script>
 	import { fade } from 'svelte/transition';
+    import Aktuality from '../../content/Aktuality.md';
 </script>
 
 <main in:fade>
-	<h1>Aktuality</h1>
+    <Aktuality />
 </main>

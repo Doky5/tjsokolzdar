@@ -1,7 +1,8 @@
 <script>
 	import { fade } from 'svelte/transition';
+    import O_Nas from '../../content/O_Nas.md';
 </script>
 
 <main in:fade>
-    <h1>O nás</h1>
+    <O_Nas />
 </main>

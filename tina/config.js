@@ -29,17 +29,10 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "normal",
+        label: "Gymnastika",
+        path: "/src/content",
         fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
           {
             type: "rich-text",
             name: "body",

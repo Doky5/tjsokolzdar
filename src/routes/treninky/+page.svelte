@@ -1,7 +1,8 @@
 <script>
 	import { fade } from 'svelte/transition';
+    import Treninky from '../../content/Treninky.md';
 </script>
 
 <main in:fade>
-    <h1>Tréninky</h1>
+    <Treninky />
 </main>
