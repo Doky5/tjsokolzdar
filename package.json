@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "npx tinacms dev -c \"vite build\"",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
@@ -15,6 +15,7 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@tinacms/cli": "^1.6.0",
 		"@types/eslint": "^9.6.0",
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -30,6 +31,7 @@
 	"type": "module",
 	"dependencies": {
 		"@rive-app/canvas": "^2.20.0",
-		"gsap": "^3.12.5"
+		"gsap": "^3.12.5",
+		"tinacms": "^2.2.0"
 	}
 }
