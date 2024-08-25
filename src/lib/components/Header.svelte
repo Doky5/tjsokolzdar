@@ -3,15 +3,15 @@
 	import { slide } from 'svelte/transition';
 	import Hamburger from './Hamburger.svelte';
 	import { menuOpen } from '$lib/stores.js';
+	import { onMount } from 'svelte';
 	/**@type {HTMLCanvasElement} */
 	let logo;
 	/**@type {boolean} */
 	let open = $state(false);
 	menuOpen.subscribe((value) => {
-		open = value; 
+		open = value;
 	});
-	$effect(() => {
-		console.log({open});
+	onMount(() => {
 		const r1 = new rive.Rive({
 			src: '/gymnastika.riv',
 			// OR the path to a discoverable and public Rive asset
@@ -34,43 +34,65 @@
 			</a>
 		</div>
 
-		<Hamburger />
+		<div class="hamburger">
+			<Hamburger />
+		</div>
 	</nav>
-	{#if open}
-		<menu in:slide={{ duration: 500 }} out:slide={{ duration: 200 }}>
+	{#key open}
+		<menu
+			class:open
+			class:closed={!open}
+			in:slide={{ duration: 500 }}
+			out:slide={{ duration: 200 }}
+		>
 			<a href="/aktuality">Aktuality</a><!--Novinky v klubu -->
 			<a href="/treninky">Tréninky</a><!-- Rozvrh tréninků -->
 			<a href="/zavody">Závody</a><!-- Tabulka se závody - kde, kdy, doprava -->
 			<a href="/o-nas">O nás</a><!-- Trenéři a gymnastky - bubliny se jmény -->
 			<a href="/kontakty">Kontakty</a><!-- Tabulka s kontakty -->
 		</menu>
-	{/if}
+	{/key}
 </header>
 
 <style>
-	header {
+	canvas {
+		max-height: 4rem;
+	}
+	menu {
 		display: grid;
-		menu {
-			display: grid;
-			padding: 0;
-			a {
-				background: rgb(226, 226, 226);
-				padding: 20px;
-				text-align: center;
-			}
+		background: #e7e7e7;
+		a {
+			padding: 1rem 2rem;
+			border-bottom: solid rgb(196, 196, 196) 2px;
 		}
-		.logo {
-			display: flex;
-			canvas {
-				height: 4rem;
-				margin: 10px;
-			}
-		}
-
-		nav {
+	}
+	.closed {
+		display: none;
+	}
+	.hamburger {
+		display: block;
+	}
+	.logo {
+		margin-left: 20px;
+	}
+	@media (width > 630px) {
+		header {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+		}
+		menu {
+			display: flex !important;
+			gap: 40px;
+			margin-right: 40px;
+			background: none;
+			a {
+				border-bottom: none;
+				padding: 0;
+			}
+		}
+		.hamburger {
+			display: none;
 		}
 	}
 </style>

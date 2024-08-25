@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@rive-app/canvas": "^2.20.0"
+		"@rive-app/canvas": "^2.20.0",
+		"gsap": "^3.12.5"
 	}
 }
