@@ -69,13 +69,10 @@
 	.closed {
 		display: none;
 	}
-	.hamburger {
-		display: block;
-	}
 	.logo {
 		margin-left: 20px;
 	}
-	@media (width > 630px) {
+	@media (width > 720px) {
 		header {
 			display: flex;
 			justify-content: space-between;
@@ -92,7 +89,9 @@
 			}
 		}
 		.hamburger {
-			display: none;
+			opacity: 0;
+			position: absolute;
+			pointer-events: none;
 		}
 	}
 </style>

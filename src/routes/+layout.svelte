@@ -8,7 +8,9 @@
 
 <style>
 	:global(main)  {
-		margin: 30px;
+		width: min(100% - 4rem, 1200px);
+		margin-inline: auto;
+		margin-top: 2rem;
 	}
 	:global(*) {
 		margin: 0;

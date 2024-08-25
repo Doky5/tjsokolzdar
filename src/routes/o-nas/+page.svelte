@@ -3,5 +3,5 @@
 </script>
 
 <main in:fade>
-	<h1>Home page</h1>
+    <h1>O nás</h1>
 </main>
