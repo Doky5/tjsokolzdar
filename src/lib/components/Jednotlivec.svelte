@@ -9,14 +9,14 @@
 </script>
 
 <div class="place">
-	<div
+	<a href="/o-nas"
 		data-tooltip="{p_jmeno}"
 		style="
 			border-bottom: none; 
 			cursor: pointer;"
 	>
 		<img src="/clenove/{jmeno}.png" alt={jmeno} />
-	</div>
+	</a>
 	{#if misto >= 4}
 		<div class="hvezda">
 			<Hvezda {misto} rotate={2.5 * misto} t_size={1} />

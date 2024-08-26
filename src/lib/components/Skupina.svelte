@@ -44,7 +44,7 @@
 <div class="skupina">
 	<div class="images p{jmena.length}">
 		{#each jmena as jmeno, index}
-			<a href="/404"
+			<a href="/o-nas"
 				class="l{index * 25}"
 				data-tooltip={jmeno.replaceAll('_', ' ')}
 				style="border-bottom: none;  cursor: pointer; display: block"
