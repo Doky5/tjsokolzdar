@@ -25,6 +25,6 @@ main {
 }
 
 article {
-    width: min(80%, 800px);
+    width: min(80%, 1500px);
     margin-inline: auto;
 }

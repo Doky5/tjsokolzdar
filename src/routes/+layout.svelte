@@ -8,7 +8,6 @@
 
 <style>
 	:global(main) {
-		padding-inline: min(4rem, 10%);
 		margin-inline: auto;
 		margin-top: 1rem;
 	}
