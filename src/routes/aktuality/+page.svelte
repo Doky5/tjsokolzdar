@@ -4,5 +4,7 @@
 </script>
 
 <main in:fade>
-    <Aktuality />
+    <article>
+        <Aktuality />
+    </article>
 </main>

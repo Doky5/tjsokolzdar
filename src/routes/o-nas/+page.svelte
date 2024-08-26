@@ -4,5 +4,7 @@
 </script>
 
 <main in:fade>
-    <O_Nas />
+    <article>
+        <O_Nas />
+    </article>
 </main>

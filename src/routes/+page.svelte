@@ -6,7 +6,7 @@
 	import { onMount, tick } from 'svelte';
 	onMount(() => {
 		gsap.fromTo(
-		   "h1",
+		   ".home h1",
 			 {y: 50, opacity: 0 },
 			 {y: 0, opacity: 1,delay: 0.5}
 		);
@@ -14,8 +14,10 @@
 </script>
 
 <main in:fade>
-	<div  class='home'>
+	<div class='home'>
 		<h1>Domovská stránka beta</h1>
 	</div>
-	<Domu />
+	<article>
+		<Domu />
+	</article>
 </main>

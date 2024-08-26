@@ -10,7 +10,7 @@
 	:global(main)  {
 		padding-inline: min(4rem, 10%) ;
 		margin-inline: auto;
-		margin-top: 2rem;
+		margin-top: 1rem;
 	}
 	:global(*) {
 		margin: 0;

@@ -4,5 +4,7 @@
 </script>
 
 <main in:fade>
-    <Treninky />
+    <article>
+        <Treninky />
+    </article>
 </main>

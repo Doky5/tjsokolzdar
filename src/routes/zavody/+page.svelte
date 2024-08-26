@@ -4,5 +4,7 @@
 </script>
 
 <main in:fade>
-    <Zavody />
+    <article>
+        <Zavody />
+    </article>
 </main>
