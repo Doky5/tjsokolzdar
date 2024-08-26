@@ -77,6 +77,17 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			a {
+				text-decoration: underline transparent;
+				text-underline-offset: 0px;
+				transition: text-decoration .4s, text-underline-offset .4s;
+				color: black;
+			}
+			a:hover {
+				text-decoration: underline 2px #ed028d;
+					text-underline-offset: 5px;
+					color: var(--pico-color);
+			}
 		}
 		menu {
 			display: flex !important;
@@ -93,5 +104,8 @@
 			position: absolute;
 			pointer-events: none;
 		}
+	}
+	header {
+		margin-top: 10px;
 	}
 </style>
