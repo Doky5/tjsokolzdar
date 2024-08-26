@@ -1,9 +1,21 @@
 <script>
-	import { fade } from 'svelte/transition';
-	import Domu from "../content/Domu.md";
+	import { fade, fly } from 'svelte/transition';
+	import Domu from '../content/Domu.md';
+	import '$lib/styles/home.css'
+	import gsap from 'gsap';
+	import { onMount, tick } from 'svelte';
+	onMount(() => {
+		gsap.fromTo(
+		   "h1",
+			 {y: 50, opacity: 0 },
+			 {y: 0, opacity: 1,delay: 0.5}
+		);
+	});
 </script>
 
 <main in:fade>
-	<h1>Home page</h1>
-	<Domu/>
+	<div  class='home'>
+		<h1>Domovská stránka beta</h1>
+	</div>
+	<Domu />
 </main>
