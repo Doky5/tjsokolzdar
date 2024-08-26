@@ -5,7 +5,7 @@
 
 # Aktuality
 
-> //obsah změněn CHAT-GPT
+> //obsah změněn CHAT-GPT teď
 
 ## První závody jarní sezóny - Praha
 
