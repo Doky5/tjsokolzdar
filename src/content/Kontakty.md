@@ -7,4 +7,4 @@
 
 Kde trénujeme?
 
-<iframe style="border:none" src="https://frame.mapy.cz/s/favekesohu" width="700" height="466" frameborder="0"></iframe>
+<iframe style="border:none" src="https://frame.mapy.cz/s/favekesohu" width="100%" height="466" frameborder="0"></iframe>
