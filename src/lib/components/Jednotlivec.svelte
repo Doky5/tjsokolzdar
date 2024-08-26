@@ -3,12 +3,20 @@
 
 	/**@type {string}*/
 	export let jmeno;
+	let p_jmeno = jmeno.replaceAll('_', ' ');
 	/**@type {number}*/
 	export let misto;
 </script>
 
 <div class="place">
-	<img src="/clenove/{jmeno}.png" alt={jmeno} />
+	<div
+		data-tooltip="{p_jmeno}"
+		style="
+			border-bottom: none; 
+			cursor: pointer;"
+	>
+		<img src="/clenove/{jmeno}.png" alt={jmeno} />
+	</div>
 	{#if misto >= 4}
 		<div class="hvezda">
 			<Hvezda {misto} rotate={2.5 * misto} t_size={1} />
@@ -17,7 +25,7 @@
 		<img src="/medaile/{misto}.svg" alt="{misto}.místo" />
 	{/if}
 
-	<p>{jmeno.replaceAll('_', ' ')}</p>
+	<p>{p_jmeno}</p>
 </div>
 
 <style>
@@ -39,7 +47,7 @@
 		margin-top: 40px;
 		& + p {
 			margin-top: 70px;
-		} 
+		}
 	}
 	div.place {
 		display: grid;

@@ -7,8 +7,8 @@
 <slot />
 
 <style>
-	:global(main)  {
-		padding-inline: min(4rem, 10%) ;
+	:global(main) {
+		padding-inline: min(4rem, 10%);
 		margin-inline: auto;
 		margin-top: 1rem;
 	}
@@ -16,4 +16,5 @@
 		margin: 0;
 		padding: 0;
 	}
+	
 </style>

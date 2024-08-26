@@ -42,15 +42,21 @@
 </script>
 
 <div class="skupina">
-	<div class="images">
+	<div class="images p{jmena.length}">
 		{#each jmena as jmeno, index}
-			<img
-				src="/clenove/{jmeno}.png"
-				alt=""
-				style:left={index * 25 + 'px'}
-				style:z-index={jmena.length - index}
-				bind:this={images[index]}
-			/>
+			<a href="/404"
+				class="l{index * 25}"
+				data-tooltip={jmeno.replaceAll('_', ' ')}
+				style="border-bottom: none;  cursor: pointer; display: block"
+			>
+				<img
+					src="/clenove/{jmeno}.png"
+					alt=""
+					style:left={index * 25 + 'px'}
+					style:z-index={jmena.length - index}
+					bind:this={images[index]}
+				/>
+			</a>
 		{/each}
 	</div>
 	{#if misto >= 4}
@@ -94,8 +100,8 @@
 		width: 125px;
 	}
 	img[src*='l.'] {
-        width: 150px;
-        margin-top: -90px;
+		width: 150px;
+		margin-top: -90px;
 	}
 
 	.medaile {
@@ -112,5 +118,36 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 2rem;
+	}
+	.p5 {
+		.l0::after {
+			left: 15%;
+		}
+		.l25::after {
+			left: 35%;
+		}
+		.l50::after {
+			left: 55%;
+		}
+		.l75::after {
+			left: 70%;
+		}
+		.l100::after {
+			left: 90%;
+		}
+	}   
+    .p4 {
+		.l0::after {
+			left: 20%;
+		}
+		.l25::after {
+			left: 45%;
+		}
+		.l50::after {
+			left: 65%;
+		}
+		.l75::after {
+			left: 90%;
+		}
 	}
 </style>

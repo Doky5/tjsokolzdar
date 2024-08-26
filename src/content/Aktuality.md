@@ -5,31 +5,35 @@
 
 # Aktuality
 
-> //obsah změněn CHAT-GPT teď
+> obsah změněn CHAT-GPT
 
 ## První závody jarní sezóny - Praha
 
 Naše šikovné závodnice linie A vyrazily na první závody jarní sezóny do Prahy. I přes pár drobných chybek zajely nádherné sestavy a přivezly si skvělá umístění:
 
 <div>
-    <Jednotlivec jmeno='Niki_Vetešníková' misto="3" />
-    <Jednotlivec jmeno='Esťa_Dokulilová' misto="2" />
+    <Jednotlivec jmeno='Niki_Vetešníková' misto="4" />
+    <Jednotlivec jmeno='Esťa_Dokulilová' misto="5" />
 </div>
+
+## Vánoční vystoupení
+
+Vážení rodiče a přátelé moderní gymnastiky,
+srdečně Vás zveme na vánoční vystoupení moderních gymnastek, které se uskuteční ve žďárské Sokolovně dne 21. prosince 2023 od 17:00 hodin.
+Přijďte se za námi vánočně naladit a posedět u sklenky dobrého svařáku. Naše gymnastky připravily skvělé vystoupení, které Vás zaručeně nadchne. Těšíme se na Vás! 😊
 
 ## Žďárský skřítek
 
 Trochu toho kouzla ze Žďáru:
 
 <div>
-    <Skupina jmena='Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková, Esťa_Dokulilová' misto="3" />
-        <Skupina jmena='Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková' misto="1" />
+    <Skupina jmena='Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková, Esťa_Dokulilová' misto="4" />
+    <Skupina jmena='Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková' misto="9" />
+    <Skupina jmena='Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková' misto="12" />
+    <Skupina jmena='Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková' misto="5" />
+    <Skupina jmena='Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková, Esťa_Dokulilová, Niki_Vetešníková' misto="11" />
 </div>
 
-- **0. B kategorie (Lauri, Terez, Luci, Sári)** - 4. místo
-- **1. kategorie Pětka (Luci, Baruš, Krisťa, Eli, Miuš)** - 9. místo
-- **1. kategorie Čtyřka (Emi, Adél, Emča, Anež)** - 12. místo
-- **3. kategorie (Míša, Niki, Klári, Evča)** - 5. místo
-- **4. kategorie (Viki, Vanes, Anča, Klári, Áňa)** - 11. místo
 
 ## South Moravia Cup
 
