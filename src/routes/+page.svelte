@@ -1,6 +1,6 @@
 <script>
 	import { fade, fly } from 'svelte/transition';
-	import Domu from '../content/Domu.md';
+	import Domu from '../content/Domu.mdx';
 	import gsap from 'gsap';
 	let before = true;
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
@@ -27,7 +27,7 @@
 </script>
 
 <main in:fade>
-	<div class="home" class:before >
+	<div class="home" class:before>
 		<h1>Domovská stránka beta</h1>
 	</div>
 	<article>

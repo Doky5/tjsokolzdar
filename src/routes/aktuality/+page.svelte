@@ -1,10 +1,10 @@
 <script>
 	import { fade } from 'svelte/transition';
-    import Aktuality from '../../content/Aktuality.md';
+	import Aktuality from '../../content/Aktuality.mdx';
 </script>
 
 <main in:fade>
-    <article>
-        <Aktuality />
-    </article>
+	<article>
+		<Aktuality />
+	</article>
 </main>

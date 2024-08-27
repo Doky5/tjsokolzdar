@@ -32,6 +32,7 @@ export default defineConfig({
         name: "normal",
         label: "Gymnastika",
         path: "/src/content",
+        format: "mdx",
         fields: [
           {
             type: "rich-text",

@@ -1,6 +1,6 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import Kontakty from '../../content/Kontakty.md';
+	import Kontakty from '../../content/Kontakty.mdx';
 </script>
 
 <main in:fade>
@@ -15,10 +15,14 @@
 		:global(&[alt*='Facebook']) {
 			transform: scale(120%);
 		}
+        :global(& + p) {
+            margin-top: 50px;
+        }
 	}
 	article :global(div) {
 		display: flex;
-        justify-content: space-between;
-        margin: 1rem 2rem;
+		justify-content: space-between;
+        align-items: center;
+		margin: 1rem 2rem;
 	}
 </style>
