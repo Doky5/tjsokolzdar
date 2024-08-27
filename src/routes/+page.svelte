@@ -1,7 +1,6 @@
 <script>
 	import { fade, fly } from 'svelte/transition';
 	import Domu from '../content/Domu.md';
-	import '$lib/styles/home.css'
 	import gsap from 'gsap';
 	import { onMount, tick } from 'svelte';
 	onMount(() => {
