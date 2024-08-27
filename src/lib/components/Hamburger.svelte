@@ -8,7 +8,6 @@
 	import { menuOpen } from '$lib/stores';
 	menuOpen.subscribe((value) => {
 		open = value;
-		console.log('subscribed');
 	});
 	$effect(() => {
 		const r2 = new rive.Rive({
@@ -20,11 +19,9 @@
 				r2.resizeDrawingSurfaceToCanvas();
 				const inputs = r2.stateMachineInputs('State Machine 1');
 				const triggerInput = inputs.find((input) => input.name === 'Boolean 1');
-				console.log('loaded');
 				if (triggerInput) {
 					menuOpen.subscribe((value) => {
 						triggerInput.value = value;
-						console.log('gem mine open');
 					});
 				}
 			}
@@ -32,10 +29,8 @@
 	});
 	onNavigate(() => {
 		menuOpen.update(() => false);
-		console.log('navigated');
 	});
 	function handle() {
-		console.log('clicked');
 		menuOpen.update(() => !open);
 	}
 </script>

@@ -17,7 +17,7 @@
 		src="/medaile/hvezda.svg"
 		alt="{misto}. místo"
 	/>
-	<p style:font-size={t_size + 'rem'}>{misto}</p>
+	<p style:font-size={t_size + 'rem'}>{misto}.</p>
 </div>
 
 <style>
