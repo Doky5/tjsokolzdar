@@ -16,7 +16,7 @@
 			transform: scale(120%);
 		}
 	}
-	:global(article div) {
+	article :global(div) {
 		display: flex;
         justify-content: space-between;
         margin: 1rem 2rem;
