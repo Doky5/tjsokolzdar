@@ -10,7 +10,7 @@
 </main>
 
 <style>
-	:global(img[alt*='logo']) {
+	article :global(img[alt*='logo']) {
 		width: 40px;
 		:global(&[alt*='Facebook']) {
 			transform: scale(120%);
