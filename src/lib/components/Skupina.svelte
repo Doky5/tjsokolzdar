@@ -1,8 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
 	import Hvezda from './Hvezda.svelte';
+	import gsap from 'gsap';
 
-	/**@type {{jmena: any, misto: number}} */
+	/**
+	 * @typedef {Object} Props
+	 * @property {number} [misto]
+	 * @property {any} jmena
+	 */
+	/**@type {Props} */
 	let { jmena, misto } = $props();
 	jmena = jmena.split(', ');
 
@@ -10,32 +16,29 @@
 	let images = new Array(jmena.length).fill(null);
 
 	/**
-	 *
 	 * @param {HTMLImageElement} element
 	 * @param {number} left
 	 */
-	function ChangeStyle(element, left) {
-		element.style.left = Number(element.style.left.split('px')[0]) + left + 'px';
-	}
 	onMount(() => {
 		images.forEach((img, index) => {
-			let next = images[index + 1];
-			let previous = images[index - 1];
 			img.addEventListener('mouseenter', () => {
-				if (next) {
-					ChangeStyle(next, 15);
-				}
-				if (previous) {
-					ChangeStyle(previous, -15);
-				}
+				images.forEach((img, i) => {
+					if (i != index) {
+						gsap.to(img, {
+							x: i > index ? 20 : -20,
+							scale: 0.8,
+							ease: 'bounce.out',
+							duration: 0.7
+						});
+					}
+				});
 			});
+
 			img.addEventListener('mouseleave', () => {
-				if (next) {
-					ChangeStyle(next, -15);
-				}
-				if (previous) {
-					ChangeStyle(previous, 15);
-				}
+				images.forEach((image) => {
+					gsap.killTweensOf(image);
+					gsap.to(image, { x: 0, scale: 1 });
+				});
 			});
 		});
 	});
@@ -44,14 +47,15 @@
 <div class="skupina">
 	<div class="images p{jmena.length}">
 		{#each jmena as jmeno, index}
-			<a href="/o-nas"
+			<a
 				class="l{index * 25}"
+				href="/o-nas"
 				data-tooltip={jmeno.replaceAll('_', ' ')}
 				style="border-bottom: none;  cursor: pointer; display: block"
 			>
 				<img
 					src="/clenove/{jmeno}.png"
-					alt=""
+					alt={jmeno}
 					style:left={index * 25 + 'px'}
 					style:z-index={jmena.length - index}
 					bind:this={images[index]}
@@ -59,14 +63,16 @@
 			</a>
 		{/each}
 	</div>
-	{#if misto >= 4}
-		<div class="medaile m{jmena.length}">
-			<Hvezda {misto} rotate={2.5 * misto} />
-		</div>
-	{:else}
-		<div class="m{jmena.length}">
-			<img src="/medaile/{misto}{jmena.length <= 4 ? 's' : 'l'}.svg" alt="" />
-		</div>
+	{#if misto}
+		{#if misto >= 4}
+			<div class="medaile m{jmena.length}">
+				<Hvezda {misto} rotate={2.5 * misto} />
+			</div>
+		{:else}
+			<div class="m{jmena.length}">
+				<img src="/medaile/{misto}{jmena.length <= 4 ? 's' : 'l'}.svg" alt="" />
+			</div>
+		{/if}
 	{/if}
 </div>
 
@@ -80,7 +86,6 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		transition: 0.5s;
 	}
 
 	.skupina {
@@ -135,8 +140,8 @@
 		.l100::after {
 			left: 90%;
 		}
-	}   
-    .p4 {
+	}
+	.p4 {
 		.l0::after {
 			left: 20%;
 		}

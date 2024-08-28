@@ -27,6 +27,12 @@
 		width: 100%;
 		margin-inline: auto;
 	}
+	:global(.bg1) {
+		background: #d4d4d4;
+	}
+	:global(.bg2) {
+		background: #bfbfbf;
+	}
 
 	:global(*) {
 		margin: 0;
