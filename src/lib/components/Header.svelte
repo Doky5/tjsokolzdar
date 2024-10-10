@@ -46,11 +46,14 @@
 			out:slide={{ duration: 200 }}
 		>
 			<a href="/aktuality">Aktuality</a><!--Novinky v klubu -->
+			<a href="/o-nas">O nás</a><!-- Trenéři a gymnastky - bubliny se jmény -->
+			<a href="/zavodnice">Naše závodnice</a><!-- Tabulka s kontakty -->
+			<a href="/trenerky">Trenérky</a><!-- Tabulka s kontakty -->
 			<a href="/treninky">Tréninky</a><!-- Rozvrh tréninků -->
 			<a href="/zavody">Závody</a><!-- Tabulka se závody - kde, kdy, doprava -->
-			<a href="/o-nas">O nás</a><!-- Trenéři a gymnastky - bubliny se jmény -->
 			<a href="/kontakty">Kontakty</a><!-- Tabulka s kontakty -->
 		</menu>
+
 	{/key}
 </header>
 
