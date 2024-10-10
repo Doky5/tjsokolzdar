@@ -28,14 +28,18 @@
 
 <main in:fade>
 	<div class="home" class:before>
-		<h1>Domovská stránka beta</h1>
+		<h1></h1>
 	</div>
 	<article>
 		<Domu />
-	</article>
+	</article>	
 </main>
 
 <style>
+	main {
+		justify-content: center;
+		align-items: center;	
+	}
 	main .home {
 		position: relative;
 		text-align: center;
@@ -45,12 +49,6 @@
 
 		background-size: contain;
 		background-image: url('/main.jpg');
-		background-repeat: no-repeat;
-		transition: 1s;
-		border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0.264), rgba(0, 0, 0, 0.232));
-
-		&.before {
-			border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.832));
-		}
+		
 	}
 </style>
